@@ -1,54 +1,113 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LAWBOT</title>
-        <link rel="stylesheet" type="text/css" href="ss.css">
-    </head>
-    <body>
-        <h1>WELCOME TO LAWBOT</h1>
-        <img src="data:image/png;base64,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" alt="LAWBOT" width="" height="500">
-        <div class="boom">
-            <a href="login.html">LOGIN</a>|<a href="register.html">REGISTER</a>
-        </div>
-    </body>
-    <footer>
-        <button class="footer-section" onclick="loadContent('about')">About</button>
-        <button class="footer-section" onclick="loadContent('contact')">Contact</button>
-        <div id="footer-content-area"></div>
-    </footer>
-
-    <script>
-        function loadContent(type) {
-            const contentArea = document.getElementById('footer-content-area');
-            let content = '';
-
-            // Decide content based on the type
-            if (type === 'about') {
-                content = `
-                    <h3>About Us</h3>
-<p>
-    <strong>LAWBOT</strong> is designed to provide legal information in the easiest manner. 
-    Clear, concise, and accurate answers to all your legal queries are just a step away. 
-  </p>
-  <p>
-    Simply narrate your incident, and LAWBOT will guide you on the next steps you can take. 
-    It identifies the relevant Acts and Sections that apply to your situation and informs you where you can file your case, appeal, or complaint.
-  </p>
-                `;
-            } else if (type === 'contact') {
-                content = `
-                    <h3>Contact Us</h3>
-                    <p>Email: KARTHIKNAIDU09@GMAIL.COM</p>
-                    <p>Phone: +91 7095797627</p>
-                    <p>Address: 54P4+692, New Vellanur, Tamil Nadu 600055 </p>
-                `;
-            }
-
-            // Update and display the content
-            contentArea.innerHTML = content;
-            contentArea.style.display = 'block';
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://img.freepik.com/premium-photo/courtroom-scene-with-judges-bench_1348429-22562.jpg?w=1380') no-repeat center/cover fixed;
+            font-family: 'Georgia', serif;
+            color: #333;
+            margin: 0;
         }
-    </script>
+        .navbar {
+            background: rgba(34, 34, 34, 0.95);
+            padding: 15px 20px;
+            border-bottom: 3px solid #b8860b;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-brand {
+            color: #b8860b;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar-brand:hover { color: #b8860b; }
+        .nav-link {
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover { color: #b8860b; }
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: #f5f5f5;
+        }
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #dcdcdc;
+        }
+        .btn-law {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .btn-login { background: #b8860b; color: #fff; border: none; }
+        .btn-login:hover { background: #8b6508; transform: scale(1.05); }
+        .btn-register { background: #4682b4; color: #fff; border: none; }
+        .btn-register:hover { background: #36648b; transform: scale(1.05); }
+        footer {
+            background: rgba(34, 34, 34, 0.95);
+            color: #dcdcdc;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #b8860b;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a { color: #b8860b; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: #8b6508; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LEXAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Welcome to LEXAI</h1>
+        <p>Your trusted assistant for navigating the Indian legal system.</p>
+        <div>
+            <a href="{{ url_for('login') }}" class="btn btn-law btn-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-law btn-register"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 LEXAI | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">LEXAI</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
