@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: linear-gradient(to bottom, #E8F5E9, #FFFFFF);
+        }
+        form {
+            background: linear-gradient(to bottom right, #002B5C, #ADD8E6, #FFFFFF);
+            padding: 20px;
+            border: 3px solid black;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #49cc08;
+        }
+        p {
+            text-align: center;
+        }
+        a {
+            color: #f90a36;
+        }
+        a:hover {
+            color: blue;
+        }
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            background: linear-gradient(to bottom, #FF9933, #FFFFFF, #138808);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">REGISTRATION</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username"  
+            title="Username must be 3-15 characters long and can only contain letters, numbers, and underscores." 
+            required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"required
+        title="Password must be at least 8 characters long and contain at least one letter and one number." 
+            >
+        
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+        
+        
+        <button type="submit" onclick="return validatePasswords()">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login here</a></p> <footer>
+        <h3>Law is the great socializer, it is the great equalizer ~ B. R. Ambedkar </h3>
+        <h3>In a democracy, the highest duty of a citizen is to abide by the law ~ Dr. Rajendra Prasad </h3>
+    </footer>
+    <p>LawBot is your personal legal assistant, designed to make understanding the law easy and accessible. Whether you're unsure about your legal rights or need guidance on a specific issue, LawBot offers quick, reliable answers right at your fingertips. Simply ask any question, and LawBot will help you navigate your legal journey with confidence. Start chatting now and take the first step toward empowering yourself with the knowledge you deserve!</p>
+    
+    <script>
+        function validatePasswords() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return false;
+            }
+            return true;
+        }
+    
+    </script>
+</body>
+</html>
