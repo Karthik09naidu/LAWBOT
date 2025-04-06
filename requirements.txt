@@ -1,5 +1,2 @@
 flask
-flask-login
-flask-pymongo
-requests
-python-dotenv
+gunicorn
